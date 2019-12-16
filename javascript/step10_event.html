@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        let a = 0;
+        window.onload = function(){
+            document.getElementById("myBox").addEventListener("mouseover",function(){
+                if(a == 0){
+                    this.style.backgroundColor = 'gray';
+                    a=1;
+                }
+                else{
+                    this.style.backgroundColor = 'red';
+                    a=0;
+                }
+            })
+
+            document.getElementById("myBox").addEventListener("mouseout",function(){
+                    this.style.backgroundColor = 'white';
+                })
+        }
+    </script>
+
+    <style>
+        #myBox {
+            width: 1000px;
+            height: 1000px;
+            cursor: pointer;
+            border: solid 5px blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1> 마우스 이벤트</h1>
+    <div id = "myBox">  </div> 
+</body> </html>

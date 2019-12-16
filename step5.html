@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .list{
+           list-style:none;
+           padding-left:0px;
+           }
+        .table{
+            border : 2px solid black;
+            border-collapse: collapse;
+        }
+        td,th  {
+            border : 1px dotted black;
+        }
+        .cap {
+            color: violet;
+        }
+        </style>
+</head>
+
+
+<body>
+    <ul class="list">
+        <li>일번</li>
+        <li>이번</li>
+        <li>삼번</li>
+    </ul>
+
+    <ol type='a'>
+        <li value=2>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+
+    <table class='table'>
+        <colgroup>
+            <col width="100px">
+            <col width="100px">
+        </colgroup>
+        <tr>
+            <td colspan="2">dd</td>
+            <td>ss</td>
+        </tr>
+        <tr>
+            <td >dds</td>
+            <td>sss</td>
+            <td>sss</td>
+        </tr>
+    </table>
+
+    <h3>친구목록</h3>
+
+    <table class='table' >
+        <caption class="cap">친구목록</caption>
+        <colgroup>
+            <col width="100px">
+            <col width="200px">
+            <col width="300px">
+        </colgroup>
+        <thead>
+            <th>번호</th>
+            <th>이름</th>
+            <th>주소</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>손정의</td>
+                <td>일본</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>신훈</td>
+                <td>지옥</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>호날두</td>
+                <td>한국</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+</html>

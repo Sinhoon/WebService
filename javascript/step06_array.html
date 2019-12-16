@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        const array1 = [20, 10, 30, 40];
+        const array2 = new Array(10, 20, 30);
+        const array = Array(10, 20, 30);
+        const name = ['신훈', '이름'];
+        console.log(array.length);
+        array1.sort();
+        console.log(array1);
+
+        let str = array1.join('+');
+        console.log(str);
+
+        array1.splice(0, 2);
+        console.log(array1);
+
+        array1.push(40);
+
+
+        let text = "<ul>";
+        array1.forEach(print);                           // 1
+        for(let i in array1){                            // 2
+            text += "<li>" + array1[i] + "</li>";
+        }                         
+        for(let value of array1){                       // 3
+            text += "<li>" + value + "</li>";
+        }                          
+        for(let i=0 ; i<array1.length ;i++){             // 4
+            text += "<li>" + array1[i] + "</li>";
+        } 
+        array1.forEach((value)=>{                       //5
+            text += "<li>" + value + "</li>";
+        })                        
+
+
+        text += "<ul>";
+
+        function print(value) {
+            text += "<li>" + value + "</li>";
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

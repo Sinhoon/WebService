@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        // 한줄  /* 여러줄
+        var num1 = 1000;
+        var num1 = 1000;
+        console.log(num1);
+
+        // ecma6
+        var yourname = `safsaf
+        dddd`;
+        console.log(yourname);
+
+        //hoisting 선언만 undefined
+        console.log(myname == undefined);
+        var myname = " 신 훈 ";
+
+        //hoisting
+        foo();
+        function foo(name) {
+            console.log();
+        }
+
+        //error
+        /*
+        baz();
+        var baz = function(){
+            console.log();
+        }
+        */
+
+        //error - let hoisting x
+        /*
+        let a1 = 1000;
+        let a1 = 2000;
+        console.log(myname==undefined);
+        let myname = " 신 훈 "
+        */
+
+        var b1 = 100;
+        console.log(100);
+
+        if (true) {
+            var b1 = 200;
+            console.log(b1);
+        }
+        console.log(b1);
+
+        // block 허용
+        let b2 = 100;
+        console.log(100);
+
+        if (true) {
+            let b2 = 200;
+            console.log(b2);
+        }
+        console.log(b2);
+
+
+        // 상수 const
+        /*
+        const d1 = 0;
+        d1 = 2;
+        */
+
+        //const 는 reference 변경가능
+        const e1 = [1, 2, 3];
+        e1.push(4);
+        console.log(e1);
+
+    </script>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

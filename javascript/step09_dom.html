@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () {
+            const h1 = document.createElement("h1");
+            const textNode = document.createTextNode("hello");
+            h1.appendChild(textNode);
+            document.body.appendChild(h1);
+
+
+            document.getElementById("addbtn").addEventListener("click", function () {
+                let msg = document.getElementById("inputmsg").value;
+                const li = document.createElement("li");
+                li.innerText = msg;
+                document.getElementById("msglist").appendChild(li);
+                document.getElementById("inputmsg").value = "";
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" name="msg" id="inputmsg" />
+    <button id="addbtn"> 추가 </button>
+    <ul id="msglist">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+</body>
+
+
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .container {
+
+    }
+    </style>
+</head>
+<body>
+    <title>Document</title>
+    <div class="container">
+        <h3>폼 요소 구성</h3>
+        <form action="save.html" method="GET">
+            <div>
+            <label for="email2">email</label>
+            <input type="email"  value="ss" name="email" id="email2">
+            </div>
+            <div>
+            <label for="id2">id</label>
+            <input type="text" placeholder="입력" name="id" id="id2">
+            </div>
+            <div>
+            <label for="password2">pwd</label>
+            <input type="password" disabled="disabled" name="password" id="password2">
+            </div>
+
+            <div>
+            <label for="age2">age</label>
+            <input type="number" name="age" id="age2">
+            </div>
+
+            <fieldset>
+            <legend>선택</legend>
+            <div>
+                <label for="male">남자</label>
+                <input type="radio" name="gender" id="male" value="male" checked="checked">
+                <label for="female">여자</label>
+                <input type="radio" name="gender" id="female" value="female">
+            </div>
+            </fieldset>
+
+            <fieldset>
+                    <legend>선택</legend>
+                    <div>
+                        <label for="baseball">야구</label>
+                        <input type="checkbox" name="hobby" id="baseball" value="baseball" checked="checked">
+                        <label for="tennis">테니스</label>
+                        <input type="checkbox" name="hobby" id="tennis" value="tennis">
+                    </div>
+            </fieldset>
+
+            <input type="file" name="file">
+
+            <textarea name="abc">abc</textarea>
+            <input type="hidden" name="vv" value="hh">
+
+            <select name="cars" multiple >
+                <option value="a" selected>a</option>
+                <option value="b" disabled>b</option>
+                <option value="c">c</option>
+            </select>
+
+            <select name="cars"  >
+                    <option value="a" selected>a</option>
+                    <option value="b" disabled>b</option>
+                    <option value="c">c</option>
+            </select>
+
+            <div>
+            <button type="submit" value="회원가입">
+                로그인
+            </button>
+            <button type="reset">
+                취소
+            </button>
+            </div>
+        </form>        
+    </div>
+
+
+
+</body>
+</html>

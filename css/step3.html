@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Document</title>
+    <style>
+        body{
+            
+        }
+        
+        .static {
+            position: static  ;
+            left : 30px;
+            border-bottom: blue 3px;
+            background-color: green;
+        }
+        
+        .float {
+            width: 100;
+            height: 100;
+            border : 4px solid blue;
+            float: left;    
+
+        }
+
+        .clear{
+            clear: both;
+        }
+
+        .cc {
+            border : black solid 2px;
+            overflow: hidden;
+        }
+    </style>    
+</head>
+<body>
+
+    <div class = 'static'>
+        11
+    </div>
+    <h1 class = "static">dd</h1>
+    <div class = 'static'>
+        22
+    </div>
+
+
+    <div class = "cc">
+    <div class = "float">
+        aaa
+    </div>
+
+    <div class = "float">
+            aaa
+    </div>
+    </div>
+
+    <div class = "clear">
+            aaa
+    </div>
+    <div class = "float">
+            aaa
+    </div>
+
+</body>
+</html>
