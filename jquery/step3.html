@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+        <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+                
+        $(document).ready(function(){
+                $("p").wrap("<div style='border:solid 2px yellow'> </div>");
+                $("p").prepend("<div> prepend </div>");
+                //("<div> prepend </div>").prependTo("p");
+                $("p").append("<div> append </div>");
+                //("<div> prepend </div>").appendTo("p");
+                $("p").before("<div> before </div>");
+                $("p").after("<div> after </div>");
+                $("p").html("<h1> html </h1>");        // 태그 먹기
+                $("p").text("<h1> text </h1>");        // 태그도 텍스트
+
+                //$("p").remove(); //전체 지우기
+                //$("p").remove();
+                //$("p").empty(); // 내용 지우기
+                }
+            );
+            
+
+    </script>
+        <style type="text/css">
+        p {
+                border: solid red 2px;
+        }
+        div {
+                border: solid blue 2px;
+        }
+        </style>
+</head>
+<body>
+        <p>query</p>
+    
+        
+</body>
+</html>

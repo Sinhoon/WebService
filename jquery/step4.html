@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+        <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+                $(".error").hide();
+                $("#checkid").focus();  
+                $("#notPwd").hide();
+                let freepassword = $("#freepassword").html();
+                // $("#send").on("click",function(){})
+                $("#send").click(function(e){
+                        e.preventDefault();
+                        if($("#checkid").val()){
+                                $("#errorId").hide();
+                        }
+                        else{   
+                                $("#errorId").show();
+                                $("#id").focus();
+                                return;
+                        }
+                        if($("#checkemail").val()){
+                                $("#errorEmail").hide();
+                        }
+                        else{
+                                $("#errorEmail").show();
+                                $("#email").focus();
+                                return;
+                        }
+                        if($("#checkpwd").val()){
+                                $("#errorPwd").hide();
+                        }
+                        else{
+                                $("#errorPwd").show();
+                                $("#pwd").focus();
+                                return;
+                        }
+
+                        if ($("#checkpwd").val() != freepassword){
+                                $("#notPwd").show();
+                                $("#pwd").val("");
+                                $("#pwd").focus();
+                                return;
+                        }
+                        else{
+                                $("#notPwd").hide();
+                        }
+                        f.submit();
+                        
+                });
+         });
+
+    </script>
+        <style type="text/css">
+        .error {
+                color : red;
+        }
+       
+        </style>
+</head>
+<body>
+        <h2></h2>
+        <h3>event</h3>
+        <form action="step1.html" method="get" name="f">
+                <label for="checkid"> 아이디 </label>
+                <input type="text" name="id" id="checkid" placeholder="아이디">
+                <span class ="error" id="errorId">아이디를 입력하시오</span>
+                <br>
+                <label for="checkemail"> 이메일  </label>
+                <input type="email" name="email" id="checkemail" placeholder="이메일">
+                <span class ="error" id="errorEmail">이메일 입력하시오</span>
+                <br>
+                <label for="checkpwd"> 패스워드  </label>
+                <input type="password" name="pwd" id="checkpwd" placeholder="패스워드">
+                <span class ="error" id="errorPwd">패스워드 입력하시오</span>
+                <span class ="error" id="notPwd">패스워드 일치하지않습니다</span>
+                <br>
+        <button type="submit" id="send"> 로그인 </button>
+        <button type="reset"> 리셋 </button>
+        <br>
+        <span id="freepassword">123</span>
+        </form>
+
+    
+        
+</body>
+</html>

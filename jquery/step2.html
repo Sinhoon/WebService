@@ -7,35 +7,34 @@
     <script type="text/javascript">
                 
         $(document).ready(function(){
-        
-            let test;
-            $("#message").keydown(function (key) {
-                if(key.which == 13){
-                        if(test){
-                            eval(test+".removeClass('s')");
-                        }
-                        $(li).eq(0).text("gg");
-                        test = $("#message").val().replace(";","");
-                        eval(test+".addClass('s')");
+                //$("li").eq(0).addClass('s');  
+                //$("li").first().addClass('s');  
+                //$("li").not(":first").addClass('s');
+                /*
+                $("li").each(function(index,element){
+                        console.log(index);
+                        console.log($(element).text());
+                        console.log($(this).text());
+                });
+                */
 
+                //$("div").children().addClass('s');
+
+                //$("ul").closet('div').addclass('s');
+
+                //$("#root").find("li").addClass("s");
+                //$("#root").find("li").first().nextAll().addClass("s");
+                //$("#root").find("li").parent().addClass("s");
+                //$("#root").find("li").parents().addClass("s");
+                        
+                //$("li").eq(2).prev().addClass('s');
+                //$("li").eq(2).prevAll().addClass('s');
+                $("#root").find("li").parent().parent().siblings().addClass('s');
                        
                 }
-            });
+            );
             
-            const arrayDiv = $('div');
-            for(let i =0;i<arrayDiv.length;i++){
-                console.log(arrayDiv[i]);
-            }
-    
-            $('div').each( function(value,element) {
-                console.log(value, $(element));
-            });
-    
-            $('div').each( (value,element) => {
-                console.log(value, $(element));
-            });
-            
-        });
+
     </script>
         <style type="text/css">
                 
@@ -54,11 +53,10 @@
                 
                 }
 
-
                 #panel ul{
                         list-style : none;
                 }
-                
+
                 #panel .s{
                         border : 2px solid red;
                         background-color : yellow;
@@ -90,7 +88,7 @@
                                         <li>li</li>
                                         <li></li>
                                 </ul>
-                                <div class="third sung">div class="third sung"</div>
+                                <div class="third">div class="third sung"</div>
                         </div>
                         <div>div</div>
                         
